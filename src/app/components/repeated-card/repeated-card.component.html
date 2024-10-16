@@ -1,0 +1,74 @@
+<div class="repeated-container">
+    <div class="top-card" >
+        <div class="repeated" *ngFor="let card of cards | slice:0:4; let i = index">
+            <div class="content">
+                <p class="category">
+                    <span>
+                        {{card.category}}
+                    </span>
+                    <span>
+                        ...
+                    </span>
+                </p>
+                <div class="card-footer">
+                    <h2 class="price">
+                        {{card.price}}$
+                    </h2>
+                    <p class="title">
+                        <span class="card-title">
+                            {{card.title}}
+                        </span>
+                        <span class="store">
+                            <span>
+                                InStore
+                            </span>
+                            <br>
+                            <span>
+                                {{card.rating.count}}
+                            </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="layer"  [ngStyle]="{'background-color': getBackgroundColorTop(i)}"></div>
+        </div>
+    </div>
+    <div class="bottom-card">
+        <div class="repeated" *ngFor="let card of cards | slice:0:4;let i=index">
+            <div class="content">
+                <p class="category">
+                    <span>
+                        {{card.category}}
+                    </span>
+                    <span>
+                        ...
+                    </span>
+                </p>
+                <div class="card-footer">
+                    <h2 class="price">
+                        {{card.price}}$
+                    </h2>
+                    <p class="title">
+                        <span class="card-title">
+                            {{card.title}}
+                        </span>
+                        <span class="store">
+                            <span>
+                                InStore
+                            </span>
+                            <br>
+                            <span>
+                                {{card.rating.count}}
+                            </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="layer" [ngStyle]="{'background-color': getBackgroundColorBottom(i)}"></div>
+        </div>
+    </div>
+    
+    
+    
+    
+</div>

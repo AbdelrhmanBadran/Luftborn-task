@@ -1,0 +1,26 @@
+.nav-container{
+    display: flex;
+    padding:5px 0;
+    background-color: #1D3149;
+    width: 100%;
+    img{
+        margin-inline-start:50px ;
+        @media screen and (max-width: 577px) {
+            margin-inline-start:10px ;
+        }
+    }
+    .nav-list{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin-inline-start: auto;
+        padding: 0 50px;
+        @media screen and (max-width: 577px) {
+            padding: 0 ;
+        }
+    }
+    .nav-item{
+        padding-inline: 10px;
+        color: #fff;
+    }
+}
